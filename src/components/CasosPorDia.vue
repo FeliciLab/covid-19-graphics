@@ -31,13 +31,15 @@ export default {
         newResult[index].quantidade = result[index].quantidade - result[index - 1].quantidade
       }
     })
-    console.log(result)
     this.data = {
-      labels: result.map(item => item.data),
+      labels: result.map(item => {
+        const splitted = item.data.split('-')
+        return `${splitted[2]}/${splitted[1]}`
+      }),
       datasets: [
         {
           label: 'Novos casos por dia',
-          data: result.map(item => item.quantidade),
+          data: newResult.map(item => item.quantidade),
           backgroundColor: 'rgba(52, 152, 219, 0.2)',
           borderColor: 'rgb(52, 152, 219)'
         }
