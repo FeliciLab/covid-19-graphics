@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import RoscaCasosPorMunicipio from '../views/RoscaCasosPorMunicipio.vue'
+import Tabela from '../views/Tabela.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -14,6 +15,11 @@ const routes = [
     path: '/RoscaCasosPorMunicipio',
     name: 'RoscaCasosPorMunicipio',
     component: RoscaCasosPorMunicipio
+  },
+  {
+    path: '/tabela',
+    name: 'Tabela',
+    component: Tabela
   }
 ]
 
