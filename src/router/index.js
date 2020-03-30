@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+import Curva from '../views/Curva.vue'
 import RoscaCasosPorMunicipio from '../views/RoscaCasosPorMunicipio.vue'
 import Tabela from '../views/Tabela.vue'
 import CasosPorDia from '../views/CasosPorDia.vue'
@@ -9,8 +9,8 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: Home
+    name: 'Curva Epidemiologica',
+    component: Curva
   },
   {
     path: '/rosca-casos-por-municipio',

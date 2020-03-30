@@ -1,12 +1,18 @@
+<template>
+  <RoscaPorMunicipio v-if="data.length != 0" :data="data" :options="options"/>
+</template>
+
+<style lang="scss" scoped>
+
+</style>
+
 <script>
-import { Doughnut } from 'vue-chartjs'
+import RoscaPorMunicipio from '@/components/RoscaPorMunicipio'
 import api from '@/services/api'
-// import moment from 'moment'
 export default {
-  // Casos por Municipio.
-  // Casos Por Municipio (Tabela).
-  // Casos novos por dia.
-  extends: Doughnut,
+  components: {
+    RoscaPorMunicipio
+  },
   data () {
     return {
       colors: ['#fb397a', '#1fbb87', '#5d78ff', '#fab822', '#0088ff'],
@@ -21,7 +27,7 @@ export default {
     }
   },
 
-  async mounted () {
+  async created () {
     const response = await api.get('/casos-ceara-por-dia')
     let item = null
     const data = response.data
@@ -41,7 +47,7 @@ export default {
         }
       ]
     }
-    this.renderChart(this.data, this.options)
+    // this.renderChart(this.data, this.options)
   },
   methods: {
     filterByDate (data, item) {
