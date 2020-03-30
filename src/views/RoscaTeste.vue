@@ -13,7 +13,7 @@ export default {
   },
   data () {
     return {
-      colors,
+      colors: colors.map(color => color.hex),
       data: [],
       options: {
         maintainAspectRatio: false,

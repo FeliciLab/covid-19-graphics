@@ -4,10 +4,15 @@
     <RoscaPorMunicipio :data="data" :options="options"/>
   </div>
   <div class="col-12">
-    <div class="row d-flex justify-content-center">
-      <div v-for="item in cities" :key="item.municipio" class="col-12 col-md-3 d-flex align-items-center justify-content-center">
-        <div class="legend legend-3498DB" :class="[`legend-${colors[index]}`]"></div>
-        <span>{{ item.municipio }}</span>
+    <div class="row justify-content-center" v-for="(item, index) in cities" :key="item.municipio">
+      <div class="col-6 d-flex align-items-center justify-content-start">
+        <div class="d-flex w-100 ml-5 ml-md-0 justify-content-md-center">
+          <div class="legend legend-3498DB" :class="[`legend-${classes[index]}`]"></div>
+          <span>{{ item.municipio }}</span>
+        </div>
+      </div>
+      <div class="col-6 text-center">
+        {{ item.quantidade }}
       </div>
     </div>
   </div>
@@ -24,7 +29,8 @@ export default {
   },
   data () {
     return {
-      colors,
+      classes: colors.map(color => color.class),
+      colors: colors.map(color => color.hex),
       data: [],
       cities: [],
       options: {
@@ -53,15 +59,10 @@ export default {
         {
           label: 'Número de Casos Confirmados',
           data: citiesArr.map(item => item.quantidade),
-          backgroundColor: colors,
+          backgroundColor: colors.map(color => color.hex),
           borderWidth: 0
         }
       ]
-    }
-  },
-  methods: {
-    selectRandomColor (data) {
-      return data.map(item => this.colors[Math.floor(Math.random() * this.colors.length)])
     }
   }
 }

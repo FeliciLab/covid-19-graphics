@@ -1,4 +1,23 @@
-const colors = ['#3498DB', '#fab822', '#fb397a', '#5d78ff', '#f0b800', '#1fbb87', '#ea2c59', '#0088ff', '#e06100', '#00b771', '#bbbbe3', '#e02b20', '#74a7a9', '#ec9051', '#0193d8', '#78be41', '#b83430', '#418e88', '#659ee3'
+const colors = [
+  { class: '3498DB', hex: '#3498DB' },
+  { class: 'fab822', hex: '#fab822' },
+  { class: 'fb397a', hex: '#fb397a' },
+  { class: '5d78ff', hex: '#5d78ff' },
+  { class: 'f0b800', hex: '#f0b800' },
+  { class: '1fbb87', hex: '#1fbb87' },
+  { class: 'ea2c59', hex: '#ea2c59' },
+  { class: '0088ff', hex: '#0088ff' },
+  { class: 'e06100', hex: '#e06100' },
+  { class: '00b771', hex: '#00b771' },
+  { class: 'bbbbe3', hex: '#bbbbe3' },
+  { class: 'e02b20', hex: '#e02b20' },
+  { class: '74a7a9', hex: '#74a7a9' },
+  { class: 'ec9051', hex: '#ec9051' },
+  { class: '0193d8', hex: '#0193d8' },
+  { class: '78be41', hex: '#78be41' },
+  { class: 'b83430', hex: '#b83430' },
+  { class: '418e88', hex: '#418e88' },
+  { class: '659ee3', hex: '#659ee3' }
 ]
 
 const sortByQuantity = (data) => {
