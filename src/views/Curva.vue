@@ -18,20 +18,7 @@
   </div>
 </template>
 <style lang="scss" scoped>
-  .legend {
-    width: 14px;
-    height: 14px;
-    margin-right: 10px;
-    border-radius: 3px;
-  }
 
-  .legend-blue {
-    background-color:rgb(52, 152, 219);
-  }
-
-  .legend-yellow {
-    background-color: rgb(250,184,34);
-  }
 </style>
 <script>
 import api from '@/services/api'
