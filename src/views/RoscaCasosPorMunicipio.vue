@@ -1,5 +1,17 @@
 <template>
-  <RoscaPorMunicipio v-if="data.length != 0" :data="data" :options="options"/>
+<div class="row" v-if="data.length != 0">
+  <div class="col-12">
+    <RoscaPorMunicipio :data="data" :options="options"/>
+  </div>
+  <div class="col-12">
+    <div class="row d-flex justify-content-center">
+      <div v-for="item in cities" :key="item.municipio" class="col-12 col-md-3 d-flex align-items-center justify-content-center">
+        <div class="legend legend-3498DB" :class="[`legend-${colors[index]}`]"></div>
+        <span>{{ item.municipio }}</span>
+      </div>
+    </div>
+  </div>
+</div>
 </template>
 
 <script>
@@ -14,6 +26,7 @@ export default {
     return {
       colors,
       data: [],
+      cities: [],
       options: {
         maintainAspectRatio: false,
         legend: {
@@ -33,13 +46,14 @@ export default {
     })
     let citiesArr = filterByDate(data, item)
     citiesArr = sortByQuantity(citiesArr)
+    this.cities = citiesArr
     this.data = {
       labels: citiesArr.map(item => item.municipio),
       datasets: [
         {
           label: 'Número de Casos Confirmados',
           data: citiesArr.map(item => item.quantidade),
-          backgroundColor: this.selectRandomColor(citiesArr),
+          backgroundColor: colors,
           borderWidth: 0
         }
       ]

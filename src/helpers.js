@@ -4,10 +4,10 @@ const colors = ['#3498DB', '#fab822', '#fb397a', '#5d78ff', '#f0b800', '#1fbb87'
 const sortByQuantity = (data) => {
   return data.sort((a, b) => {
     if (a.quantidade > b.quantidade) {
-      return 1
+      return -1
     }
     if (a.quantidade < b.quantidade) {
-      return -1
+      return 1
     }
     return 0
   })
