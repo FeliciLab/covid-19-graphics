@@ -2,12 +2,9 @@
   <RoscaPorMunicipio v-if="data.length != 0" :data="data" :options="options"/>
 </template>
 
-<style lang="scss" scoped>
-
-</style>
-
 <script>
 import RoscaPorMunicipio from '@/components/RoscaPorMunicipio'
+import { colors, sortByQuantity, filterByDate } from '@/helpers.js'
 import api from '@/services/api'
 export default {
   components: {
@@ -15,7 +12,7 @@ export default {
   },
   data () {
     return {
-      colors: ['#fb397a', '#1fbb87', '#5d78ff', '#fab822', '#0088ff'],
+      colors,
       data: [],
       options: {
         maintainAspectRatio: false,
@@ -34,8 +31,8 @@ export default {
     item = data.reduce((a, b) => {
       return new Date(a.data) > new Date(b.data) ? a : b
     })
-    let citiesArr = this.filterByDate(data, item)
-    citiesArr = this.sortByQuantity(citiesArr)
+    let citiesArr = filterByDate(data, item)
+    citiesArr = sortByQuantity(citiesArr)
     this.data = {
       labels: citiesArr.map(item => item.municipio),
       datasets: [
@@ -47,30 +44,10 @@ export default {
         }
       ]
     }
-    // this.renderChart(this.data, this.options)
   },
   methods: {
-    filterByDate (data, item) {
-      return data.filter(i => {
-        // eslint-disable-next-line eqeqeq
-        if (item.data == i.data) {
-          return i
-        }
-      })
-    },
     selectRandomColor (data) {
       return data.map(item => this.colors[Math.floor(Math.random() * this.colors.length)])
-    },
-    sortByQuantity (data) {
-      return data.sort((a, b) => {
-        if (a.quantidade > b.quantidade) {
-          return 1
-        }
-        if (a.quantidade < b.quantidade) {
-          return -1
-        }
-        return 0
-      })
     }
   }
 }

@@ -6,20 +6,17 @@
     <div class="col-12">
       <div class="row d-flex justify-content-center">
         <div class="col-12 col-md-3 d-flex align-items-center justify-content-center">
-          <div class="legend legend-blue"></div>
+          <div class="legend legend-3498DB"></div>
           <span>Casos Confirmados</span>
         </div>
         <div class="col-12 col-md-3 d-flex align-items-center justify-content-center">
-          <div class="legend legend-yellow"></div>
+          <div class="legend legend-fab822"></div>
           <span>Óbitos</span>
         </div>
       </div>
     </div>
   </div>
 </template>
-<style lang="scss" scoped>
-
-</style>
 <script>
 import api from '@/services/api'
 import CurvaEpidemiologica from '@/components/CurvaEpidemiologica.vue'
