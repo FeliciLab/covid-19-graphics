@@ -13,12 +13,12 @@ const routes = [
     component: Home
   },
   {
-    path: '/RoscaCasosPorMunicipio',
+    path: '/rosca-casos-por-municipio',
     name: 'RoscaCasosPorMunicipio',
     component: RoscaCasosPorMunicipio
   },
   {
-    path: '/tabela',
+    path: '/tabela-casos-por-municipio',
     name: 'Tabela',
     component: Tabela
   },

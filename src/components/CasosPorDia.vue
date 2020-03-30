@@ -15,31 +15,16 @@ export default {
     }
   },
   async mounted () {
-    const response = await api.get('/casos-ceara-por-dia')
-    const result = []
-    response.data.reduce((res, value) => {
-      if (!res[value.data]) {
-        res[value.data] = { data: value.data, quantidade: 0 }
-        result.push(res[value.data])
-      }
-      res[value.data].quantidade += value.quantidade
-      return res
-    }, {})
-    const newResult = result
-    result.forEach((item, index) => {
-      if (index !== 0) {
-        newResult[index].quantidade = result[index].quantidade - result[index - 1].quantidade
-      }
-    })
+    const response = await api.get('/casos-novos-ceara-por-dia')
     this.data = {
-      labels: result.map(item => {
+      labels: response.data.map(item => {
         const splitted = item.data.split('-')
         return `${splitted[2]}/${splitted[1]}`
       }),
       datasets: [
         {
           label: 'Novos casos por dia',
-          data: newResult.map(item => item.quantidade),
+          data: response.data.map(item => item.qtdnovoscasos),
           backgroundColor: 'rgba(52, 152, 219, 0.2)',
           borderColor: 'rgb(52, 152, 219)'
         }
