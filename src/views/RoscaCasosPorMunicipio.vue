@@ -28,14 +28,16 @@ export default {
     item = data.reduce((a, b) => {
       return new Date(a.data) > new Date(b.data) ? a : b
     })
-    const citiesArr = this.filterByDate(data, item)
+    let citiesArr = this.filterByDate(data, item)
+    citiesArr = this.sortByQuantity(citiesArr)
     this.data = {
       labels: citiesArr.map(item => item.municipio),
       datasets: [
         {
           label: 'Número de Casos Confirmados',
           data: citiesArr.map(item => item.quantidade),
-          backgroundColor: this.selectRandomColor(citiesArr)
+          backgroundColor: this.selectRandomColor(citiesArr),
+          borderWidth: 0
         }
       ]
     }
@@ -52,6 +54,17 @@ export default {
     },
     selectRandomColor (data) {
       return data.map(item => this.colors[Math.floor(Math.random() * this.colors.length)])
+    },
+    sortByQuantity (data) {
+      return data.sort((a, b) => {
+        if (a.quantidade > b.quantidade) {
+          return 1
+        }
+        if (a.quantidade < b.quantidade) {
+          return -1
+        }
+        return 0
+      })
     }
   }
 }

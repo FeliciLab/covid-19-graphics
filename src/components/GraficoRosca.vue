@@ -16,7 +16,6 @@ export default {
    async mounted () {
     const response = await api.get('/casos-ceara-por-dia')
     const result = []
-   
     this.data = {
       labels: result.map(item => {
         const splitted = item.x.split('-')
