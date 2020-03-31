@@ -1,4 +1,4 @@
-# covid-19-ceara-Vue
+# Covid-19 Ceará Vue
 
 <p align="center">
   <img src="https://coronavirus.ceara.gov.br/wp-content/uploads/2020/03/logo_espce_gov-1.png" width="100%" float="center"/>
