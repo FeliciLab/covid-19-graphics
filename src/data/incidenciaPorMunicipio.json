@@ -1,0 +1,110 @@
+[
+    {
+        "municipio": "Fortaleza",
+        "incidencia": 10.2
+    },
+    {
+        "municipio": "Caucaia",
+        "incidencia":4.7
+    },
+    {
+        "municipio": "Juazeiro do Norte",
+        "incidencia":4.0
+    },
+    {
+        "municipio": "Maracanaú",
+        "incidencia":3.8
+    },
+    {
+        "municipio": "Sobral",
+        "incidencia":3.6
+    },
+    {
+        "municipio": "Crato",
+        "incidencia":3.3
+    },
+    {
+        "municipio": "Itapipoca",
+        "incidencia":2.7
+    },
+    {
+        "municipio": "Maranguape",
+        "incidencia":2.5
+    },
+    {
+        "municipio": "Iguatu",
+        "incidencia":2.2
+    },
+    {
+        "municipio": "Quixadá",
+        "incidencia":2.1
+    },
+    {
+        "municipio": "Pacatuba",
+        "incidencia":1.8
+    },
+    {
+        "municipio": "Quixeramobim",
+        "incidencia":1.6
+    },
+    {
+        "municipio": "Aquiraz",
+        "incidencia":1.3
+    },
+    {
+        "municipio": "Russas",
+        "incidencia":1.2
+    },
+    {
+        "municipio": "Canindé",
+        "incidencia":1.2
+    },
+    {
+        "municipio": "Tianguá",
+        "incidencia":0.9
+    },
+    {
+        "municipio": "Crateús",
+        "incidencia":0.9
+    },
+    {
+        "municipio": "Aracati",
+        "incidencia":0.8
+    },
+    {
+        "municipio": "Pacajus",
+        "incidencia":0.7
+    },
+    {
+        "municipio": "Cascavel",
+        "incidencia":0.6
+    },
+    {
+        "municipio": "Icó",
+        "incidencia":0.5
+    },
+    {
+        "municipio": "Horizonte",
+        "incidencia":0.5
+    },
+    {
+        "municipio": "Camocim",
+        "incidencia":0.5
+    },
+    {
+        "municipio": "Acaraú",
+        "incidencia":0.4
+    },
+    {
+        "municipio": "Morada Nova",
+        "incidencia":0.3
+    },
+    {
+        "municipio": "Viçosa do Ceará",
+        "incidencia":0.3
+    },
+    {
+        "municipio": "Barbalha",
+        "incidencia":0.2
+    }
+]

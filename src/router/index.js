@@ -5,6 +5,7 @@ import RoscaCasosPorMunicipio from '../views/RoscaCasosPorMunicipio.vue'
 import RoscaTeste from '../views/RoscaTeste.vue'
 import Tabela from '../views/Tabela.vue'
 import CasosPorDia from '../views/CasosPorDia.vue'
+import IncidenciaMunicipio from '../views/IncidenciaPorMunicipio.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -32,6 +33,11 @@ const routes = [
     path: '/casos-por-dia',
     name: 'CasosPorDia',
     component: CasosPorDia
+  },
+  {
+    path: '/incidencia-municipio',
+    name: 'Incidencia Município',
+    component: IncidenciaMunicipio
   }
 ]
 
