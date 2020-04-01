@@ -6,11 +6,11 @@
     <div class="col-12">
       <div class="row d-flex justify-content-center">
         <div class="col-12 col-md-3 d-flex align-items-center justify-content-center">
-          <div class="legend legend-3498DB"></div>
+          <div class="legend legend-e02b20"></div>
           <span>Casos Confirmados</span>
         </div>
         <div class="col-12 col-md-3 d-flex align-items-center justify-content-center">
-          <div class="legend legend-fab822"></div>
+          <div class="legend legend-6f6f6f"></div>
           <span>Óbitos</span>
         </div>
       </div>
@@ -58,14 +58,14 @@ export default {
         {
           label: 'Número de Casos Confirmados',
           data: result.map(item => item.quantidade),
-          backgroundColor: 'rgba(52, 152, 219, 0.2)',
-          borderColor: 'rgb(52, 152, 219)'
+          backgroundColor: 'rgba(224, 43, 32, 0.2)',
+          borderColor: 'rgb(224, 43, 32)'
         },
         {
           label: 'Número de óbitos',
           data: result.map(item => item.obitos),
-          backgroundColor: 'rgba(250, 184, 34, 0.2)',
-          borderColor: 'rgb(250,184,34)'
+          backgroundColor: 'rgba(111, 111, 111, 0.2)',
+          borderColor: 'rgb(111,111,111)'
         }
       ]
     }

@@ -25,8 +25,8 @@ export default {
         {
           label: 'Novos casos por dia',
           data: response.data.map(item => item.qtdnovoscasos),
-          backgroundColor: 'rgba(52, 152, 219, 0.2)',
-          borderColor: 'rgb(52, 152, 219)'
+          backgroundColor: 'rgba(224, 43, 32, 0.2)',
+          borderColor: 'rgb(224, 43, 32)'
         }
       ]
     }

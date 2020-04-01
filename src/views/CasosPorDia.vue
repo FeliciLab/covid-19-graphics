@@ -6,7 +6,7 @@
     <div class="col-12">
       <div class="row d-flex justify-content-center">
         <div class="col-12 d-flex align-items-center justify-content-center">
-          <div class="legend legend-3498DB"></div>
+          <div class="legend legend-e02b20"></div>
           <span>Novos Casos por dia</span>
         </div>
       </div>
