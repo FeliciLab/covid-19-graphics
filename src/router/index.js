@@ -4,9 +4,16 @@ import Curva from '../views/Curva.vue'
 import RoscaCasosPorMunicipio from '../views/RoscaCasosPorMunicipio.vue'
 import Tabela from '../views/Tabela.vue'
 import CasosPorDia from '../views/CasosPorDia.vue'
+import CasosEpidemiologico from '../views/CasosEpidemiologico.vue'
+
 Vue.use(VueRouter)
 
 const routes = [
+  {
+    path: '/',
+    name: 'Casos Epidemiológico',
+    component: CasosEpidemiologico
+  },
   {
     path: '/curva-epidemiologica',
     name: 'Curva Epidemiologica',
