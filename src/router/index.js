@@ -5,12 +5,18 @@ import RoscaCasosPorMunicipio from '../views/RoscaCasosPorMunicipio.vue'
 import RoscaTeste from '../views/RoscaTeste.vue'
 import Tabela from '../views/Tabela.vue'
 import CasosPorDia from '../views/CasosPorDia.vue'
-import IncidenciaMunicipio from '../views/IncidenciaPorMunicipio.vue'
+import CasosEpidemiologico from '../views/CasosEpidemiologico.vue'
+
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
+    name: 'Casos Epidemiológico',
+    component: CasosEpidemiologico
+  },
+  {
+    path: '/curva-epidemiologica',
     name: 'Curva Epidemiologica',
     component: Curva
   },
@@ -33,11 +39,6 @@ const routes = [
     path: '/casos-por-dia',
     name: 'CasosPorDia',
     component: CasosPorDia
-  },
-  {
-    path: '/incidencia-municipio',
-    name: 'Incidencia Município',
-    component: IncidenciaMunicipio
   }
 ]
 

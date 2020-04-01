@@ -1,7 +1,11 @@
 <template>
-    <div>
-        <CasosPorDia>
-        <Curva>
+    <div class="p-3">
+        <div>
+            <CasosPorDia />
+        </div>
+        <div class="pt-3">
+            <Curva />
+        </div>
     </div>
 </template>
 
