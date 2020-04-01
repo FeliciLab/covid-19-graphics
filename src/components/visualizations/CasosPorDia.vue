@@ -1,7 +1,7 @@
 <template>
   <div class="row">
     <div class="col-12">
-      <Line :data="data"/>
+      <ChartLine v-if="data.length !=0" :data="data"/>
     </div>
     <div class="col-12">
       <div class="row d-flex justify-content-center">
@@ -14,11 +14,11 @@
   </div>
 </template>
 <script>
-import Line from '@/components/Line.vue'
+import ChartLine from '@/components/charts/Line'
 import api from '@/services/api'
 export default {
   components: {
-    Line
+    ChartLine
   },
   data () {
     return {
@@ -41,6 +41,7 @@ export default {
         }
       ]
     }
+    console.log(this.data)
   }
 }
 </script>

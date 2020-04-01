@@ -1,26 +1,51 @@
 <template>
-    <div class="p-3">
-        <div>
-            <CasosPorDia />
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="row">
+          <div class="col-12 col-md-4"></div>
+          <div class="col-12 col-md-4"></div>
+          <div class="col-12 col-md-4"></div>
+          <div class="col-12 col-md-4"></div>
+          <div class="col-12 col-md-4"></div>
+          <div class="col-12 col-md-4"></div>
+          <div class="col-12 col-md-4"></div>
+          <div class="col-12 col-md-4"></div>
         </div>
-        <div class="pt-3">
-            <Curva />
-        </div>
+      </div>
     </div>
+    <div class="row">
+      <div class="col-12 col-md-4">
+        <TabelaCasosPorMunicipio/>
+      </div>
+      <div class="col-12 col-md-8"></div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <div class="p-3">
+          <CurvaEpidemiologica />
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <div class="p-3">
+          <CasosPorDia />
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
 
-<style lang="scss" scoped>
-
-</style>
-
 <script>
-import CasosPorDia from '@/views/CasosPorDia'
-import Curva from '@/views/Curva'
-
+import CasosPorDia from '@/components/visualizations/CasosPorDia'
+import CurvaEpidemiologica from '@/components/visualizations/CurvaEpidemiologica'
+import TabelaCasosPorMunicipio from '@/components/visualizations/TabelaCasosPorMunicipio'
 export default {
   components: {
     CasosPorDia,
-    Curva
+    CurvaEpidemiologica,
+    TabelaCasosPorMunicipio
   }
 }
 </script>
