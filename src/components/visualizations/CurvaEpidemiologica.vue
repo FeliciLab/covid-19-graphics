@@ -1,7 +1,7 @@
 <template>
   <div class="row">
     <div class="col-12">
-      <CurvaEpidemiologica v-if="data.length !=0" :data="data" :options="options"/>
+      <Line v-if="data.length !=0" :data="data"/>
     </div>
     <div class="col-12">
       <div class="row d-flex justify-content-center">
@@ -19,21 +19,15 @@
 </template>
 <script>
 import api from '@/services/api'
-import CurvaEpidemiologica from '@/components/CurvaEpidemiologica.vue'
+import Line from '@/components/charts/Line.vue'
 export default {
   name: 'Home',
   components: {
-    CurvaEpidemiologica
+    Line
   },
   data () {
     return {
-      data: [],
-      options: {
-        maintainAspectRatio: false,
-        legend: {
-          display: false
-        }
-      }
+      data: []
     }
   },
   async created () {

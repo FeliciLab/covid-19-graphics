@@ -3,7 +3,7 @@
         <table class="table">
             <tbody>
                 <tr v-for="city in cities" :key="city.municipio">
-                    <td>{{ city.municipio}}</td>
+                    <td>{{ city.municipio }}</td>
                     <td class="text-right">{{ city.quantidade }}</td>
                 </tr>
             </tbody>

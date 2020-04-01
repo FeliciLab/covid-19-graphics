@@ -1,20 +1,31 @@
+<template>
+  <div class="row">
+    <div class="col-12">
+      <Line :data="data"/>
+    </div>
+    <div class="col-12">
+      <div class="row d-flex justify-content-center">
+        <div class="col-12 d-flex align-items-center justify-content-center">
+          <div class="legend legend-e02b20"></div>
+          <span>Novos Casos por dia</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
 <script>
-import { Line } from 'vue-chartjs'
+import Line from '@/components/Line.vue'
 import api from '@/services/api'
 export default {
-  extends: Line,
+  components: {
+    Line
+  },
   data () {
     return {
-      data: [],
-      options: {
-        maintainAspectRatio: false,
-        legend: {
-          display: false
-        }
-      }
+      data: []
     }
   },
-  async mounted () {
+  async created () {
     const response = await api.get('/casos-novos-ceara-por-dia')
     this.data = {
       labels: response.data.map(item => {
@@ -30,7 +41,6 @@ export default {
         }
       ]
     }
-    this.renderChart(this.data, this.options)
   }
 }
 </script>
