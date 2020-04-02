@@ -16,8 +16,7 @@
 </template>
 
 <script>
-
 export default {
-  props: ['city']
+  props: ['cities']
 }
 </script>

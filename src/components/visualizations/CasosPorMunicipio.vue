@@ -1,9 +1,9 @@
 <template>
     <div class="row card">
         <div class="col-12 col-md-4">
-            <TabelaCasosPorMunicipio/>
+            <TabelaCasosPorMunicipio />
         </div>
-        <div class="col-12 col-md-8"></div>
+        <!-- <div class="col-12 col-md-8"></div> -->
     </div>
 </template>
 
