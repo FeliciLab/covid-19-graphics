@@ -2,24 +2,13 @@
   <div class="container">
     <div class="row">
       <div class="col-12">
-        <div class="row">
-          <div class="col-12 col-md-4"></div>
-          <div class="col-12 col-md-4"></div>
-          <div class="col-12 col-md-4"></div>
-          <div class="col-12 col-md-4"></div>
-          <div class="col-12 col-md-4"></div>
-          <div class="col-12 col-md-4"></div>
-          <div class="col-12 col-md-4"></div>
-          <div class="col-12 col-md-4"></div>
-        </div>
+        <Indicators />
       </div>
     </div>
     <div class="row">
-      <div class="col-12 col-md-4">
-        <TabelaCasosPorMunicipio/>
+      <div class="col-12">
+        <CasosPorMunicipio />
       </div>
-      <div class="col-12 col-md-8"></div>
-    </div>
     <div class="row">
       <div class="col-12">
         <div class="p-3">
@@ -40,9 +29,11 @@
 <script>
 import CasosPorDia from '@/components/visualizations/CasosPorDia'
 import CurvaEpidemiologica from '@/components/visualizations/CurvaEpidemiologica'
-import TabelaCasosPorMunicipio from '@/components/visualizations/TabelaCasosPorMunicipio'
+
+import Indicators from '@/components/visualizations/Indicators'
 export default {
   components: {
+    Indicators,
     CasosPorDia,
     CurvaEpidemiologica,
     TabelaCasosPorMunicipio

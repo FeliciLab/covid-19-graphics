@@ -1,4 +1,9 @@
 @import 'fonts';
 @import 'legends';
+@import 'custom';
 @import '~bootstrap/scss/bootstrap';
 @import '~bootstrap-vue/src/index.scss';
+
+body {
+    font-family: "Nunito";
+}
