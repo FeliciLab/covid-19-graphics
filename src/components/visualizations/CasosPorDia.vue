@@ -16,6 +16,7 @@
 <script>
 import ChartLine from '@/components/charts/Line'
 import api from '@/services/api'
+import { orderByDate } from '@/helpers'
 export default {
   components: {
     ChartLine
@@ -27,21 +28,21 @@ export default {
   },
   async created () {
     const response = await api.get('/casos-novos-ceara-por-dia')
+    const data = orderByDate(response.data)
     this.data = {
-      labels: response.data.map(item => {
+      labels: data.map(item => {
         const splitted = item.data.split('-')
         return `${splitted[2]}/${splitted[1]}`
       }),
       datasets: [
         {
           label: 'Novos casos por dia',
-          data: response.data.map(item => item.qtdnovoscasos),
+          data: data.map(item => item.qtdnovoscasos),
           backgroundColor: 'rgba(224, 43, 32, 0.2)',
           borderColor: 'rgb(224, 43, 32)'
         }
       ]
     }
-    console.log(this.data)
   }
 }
 </script>

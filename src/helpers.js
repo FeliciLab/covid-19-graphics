@@ -41,8 +41,17 @@ const filterByDate = (data, item) => {
   })
 }
 
+const orderByDate = (data) => {
+  return data.sort(function (a, b) {
+    a = new Date(a.data)
+    b = new Date(b.data)
+    return a > b ? 1 : a < b ? -1 : 0
+  })
+}
+
 export {
   colors,
   sortByQuantity,
-  filterByDate
+  filterByDate,
+  orderByDate
 }

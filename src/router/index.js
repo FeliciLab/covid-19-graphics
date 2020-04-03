@@ -4,6 +4,7 @@ import DashBoard from '../views/Dashboards.vue'
 import CasosPorDia from '../views/CasosPorDia.vue'
 import TabelaCasosPorMunicipio from '../views/TabelaPorMunicipio'
 import RoscaCasosPorMunicipio from '../views/RoscaCasosPorMunicipio'
+import CasosEpidemiologicos from '../views/CasosEpidemiologicos'
 Vue.use(VueRouter)
 
 const routes = [
@@ -26,6 +27,11 @@ const routes = [
     path: '/rosca-casos-por-municipio',
     name: 'rosca Casos Por Municipio',
     component: RoscaCasosPorMunicipio
+  },
+  {
+    path: '/casos-epidemiologico',
+    name: 'Casos Epidemiologicos',
+    component: CasosEpidemiologicos
   }
 ]
 

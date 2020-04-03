@@ -20,6 +20,7 @@
 <script>
 import api from '@/services/api'
 import ChartLine from '@/components/charts/Line.vue'
+import { orderByDate } from '@/helpers'
 export default {
   name: 'Home',
   components: {
@@ -33,7 +34,8 @@ export default {
   async created () {
     const response = await api.get('/casos-ceara-por-dia')
     const result = []
-    response.data.reduce((res, value) => {
+    const data = orderByDate(response.data)
+    data.reduce((res, value) => {
       if (!res[value.data]) {
         res[value.data] = { data: value.data, quantidade: 0, obitos: 0 }
         result.push(res[value.data])
@@ -42,7 +44,6 @@ export default {
       res[value.data].obitos += value.obitos
       return res
     }, {})
-
     this.data = {
       labels: result.map(item => {
         const splitted = item.data.split('-')
