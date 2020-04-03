@@ -8,7 +8,7 @@
 import CasosPorDia from '@/components/visualizations/CasosPorDia'
 import CurvaEpidemiologica from '@/components/visualizations/CurvaEpidemiologica'
 export default {
-  componenets: {
+  components: {
     CasosPorDia,
     CurvaEpidemiologica
   }

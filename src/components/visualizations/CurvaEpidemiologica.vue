@@ -9,10 +9,10 @@
           <div class="legend legend-e02b20"></div>
           <span>Casos Confirmados</span>
         </div>
-        <div class="col-12 col-md-3 d-flex align-items-center justify-content-center">
+        <!-- <div class="col-12 col-md-3 d-flex align-items-center justify-content-center">
           <div class="legend legend-6f6f6f"></div>
           <span>Óbitos</span>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
@@ -37,11 +37,11 @@ export default {
     const data = orderByDate(response.data)
     data.reduce((res, value) => {
       if (!res[value.data]) {
-        res[value.data] = { data: value.data, quantidade: 0, obitos: 0 }
+        res[value.data] = { data: value.data, quantidade: 0 }
         result.push(res[value.data])
       }
       res[value.data].quantidade += value.quantidade
-      res[value.data].obitos += value.obitos
+      // res[value.data].obitos += value.obitos
       return res
     }, {})
     this.data = {

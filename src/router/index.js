@@ -29,7 +29,7 @@ const routes = [
     component: RoscaCasosPorMunicipio
   },
   {
-    path: '/casos-epidemiologico',
+    path: '/casos-epidemiologicos',
     name: 'Casos Epidemiologicos',
     component: CasosEpidemiologicos
   }
